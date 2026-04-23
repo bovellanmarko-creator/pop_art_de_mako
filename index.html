@@ -6,7 +6,7 @@
     <title>Pop Art de Mako - Taskusta Taiteeksi</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Special+Elite&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Perusasetukset */
+        /* Perusasetukset ja keskitys */
         body {
             margin: 0;
             padding: 0;
@@ -18,7 +18,7 @@
             align-items: center;
         }
 
-        /* Säiliö vie 2/3 (66%) leveydestä ja on keskellä */
+        /* Säiliö vie 2/3 (66.6%) leveydestä ja on keskellä */
         .main-container {
             width: 66.6vw; 
             min-width: 320px;
@@ -69,7 +69,6 @@
             color: #2c3e50;
             font-size: clamp(30px, 6vw, 60px);
             margin-bottom: 4vw;
-            letter-spacing: 1px;
         }
 
         /* Teosrivit 50/50 jaolla */
@@ -81,7 +80,7 @@
         }
 
         .art-item {
-            flex: 0 0 47%; /* Puolet leveydestä */
+            flex: 0 0 47%; /* Noin puolet leveydestä */
         }
 
         .art-image {
@@ -106,7 +105,7 @@
             font-size: clamp(13px, 1.4vw, 17px);
         }
 
-        /* Responsiivisuus puhelimille */
+        /* Mobiilioptimointi */
         @media (max-width: 1024px) {
             .main-container { width: 85vw; }
         }
@@ -135,11 +134,21 @@
             <div class="artist-story">
                 <h3>Arkisia kuitteja ja suuria visioita</h3>
                 <p>
-                    Työskentelen usein kirjaston rauhassa ja kierrätän taskuihini kertyneitä arkisia kuitteja teosteni pohjana. Taittelemalla kuitin neliöksi luon raamit, joiden sisään aikamme piirturit – kuitin tekstit, viivakoodit ja grafiikka – asettuvat osaksi taideteosta.
+                    Työskentelen usein kirjaston rauhassa ja kierrätän taskuihini kertyneitä kuitteja teosteni pohjana. Taittelemalla kuitin neliöksi luon raamit, joiden sisään aikamme piirturit – kuitin tekstit, viivakoodit ja grafiikka – asettuvat osaksi taideteosta.
                 </p>
                 <p>
-                    Etsin sosiaalisesta mediasta kuittien henkeen sopivia hahmoja ja aiheita, usein mikkeliläisiä ihmisiä ja heidän tarinoitaan. Pienelle kuitille syntyy piirros kaikilla käsiini osuvilla kynillä. Valmis teos skannataan kirjastossa ja tulostetaan neljässä osassa, jotka kasaan suureksi, yhtenäiseksi teokseksi. Alkuperäinen piirros saattaa haalistua, mutta suureksi zoomattu vedos säilyttää hetken ikuisesti.
+                    Etsin sosiaalisesta mediasta kuittien henkeen sopivia hahmoja ja aiheita. Pienelle kuitille syntyy piirros kaikilla käsiini osuvilla kynillä. Valmis teos skannataan ja skaalataan suureksi, jolloin arkisesta paperinpalasta kasvaa vaikuttava kokonaisuus.
                 </p>
+            </div>
+
+            <div class="art-row">
+                <div class="art-item">
+                    <img src="malli.jpg" alt="Malli-teos" class="art-image">
+                </div>
+                <div class="art-item art-text">
+                    <h2>Näkymättömät kuitit</h2>
+                    <p>Akseli Gallen-Kallelan tiedettiin käyttäneen prostituoituja malleinaan. Kuitteja katsellessa nousee ajatus: nuo mallit tuskin saivat palveluistaan kuitteja, eikä heidän oikeuksiaan kukaan valvonut. Teos antaa äänen historian hiljaisille todistajille.</p>
+                </div>
             </div>
 
             <div class="art-row">
@@ -148,7 +157,7 @@
                 </div>
                 <div class="art-item art-text">
                     <h2>Taskusta poimittu inspiraatio</h2>
-                    <p>Jokainen löydetty kuitti on mahdollisuus. Tässä näkyy prosessin alku: arkinen paperinpala, joka odottaa muuntumistaan osaksi suurempaa tarinaa.</p>
+                    <p>Jokainen löydetty kuitti on uusi alku. Tässä näkyy prosessin inhimillinen lähtöpiste: arkinen paperinpala, joka odottaa muuntumistaan tarinaksi.</p>
                 </div>
             </div>
 
@@ -158,17 +167,7 @@
                 </div>
                 <div class="art-item art-text">
                     <h2>Zoomattu todellisuus</h2>
-                    <p>Pieni muuttuu suureksi. Kirjaston laitteilla skaalattu teos tuo esiin kuitin ja kynän jäljen yksityiskohdat, jotka muuten jäisivät huomaamatta.</p>
-                </div>
-            </div>
-
-            <div class="art-row">
-                <div class="art-item">
-                    <img src="huvipuisto" alt="Huvipuisto-teos" class="art-image">
-                </div>
-                <div class="art-item art-text">
-                    <h2>Linnanmäen Syke</h2>
-                    <p>Värikäs ja dynaaminen tulkinta, jossa kuitin taitokset ja tekstit rytmittävät liikettä ja tunnelmaa.</p>
+                    <p>Pieni muuttuu suureksi. Kirjaston laitteilla skaalattu teos tuo esiin kynän jäljen ja kuitin tekstuurin yksityiskohdat, jotka muuten jäisivät huomaamatta.</p>
                 </div>
             </div>
 
