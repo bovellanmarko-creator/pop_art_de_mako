@@ -3,65 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taidegalleria - Skaalautuva 50-luku</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Special+Elite&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Pop Art de Mako - Taidetta Kuiteille</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Special+Elite&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Perusasetukset */
+        /* 1950-luvun tyyli ja skaalautuvuus */
         body {
             margin: 0;
             padding: 0;
-            background-color: #f4ece1;
+            background-color: #f4ece1; /* Retro kermasävy */
             font-family: 'Special Elite', typewriter, serif;
             color: #333;
             display: flex;
-            justify-content: center; /* Keskittää säiliön vaakasuunnassa */
+            justify-content: center;
         }
 
-        /* Skaalautuva pääsäiliö */
+        /* Sivuston keskittävä säiliö */
         .main-container {
-            width: 90%; /* Vie aina 90% näytön leveydestä */
-            max-width: 1000px; /* Estää sivua leviämästä liian suureksi jättinäytöillä */
+            width: 95%; 
+            max-width: 1000px;
             background-color: #ffffff;
-            box-shadow: 0 0 5vw rgba(0,0,0,0.1);
+            box-shadow: 0 0 4vw rgba(0,0,0,0.1);
             min-height: 100vh;
         }
 
-        /* Pääkuva skaalautuu automaattisesti */
+        /* Pääkuva ylhäältä alkaen */
         .hero-image {
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 0.8vw solid #5d8aa8; /* Reunus skaalautuu näytön mukaan */
+            border-bottom: 0.8vw solid #c0392b; /* Punainen koristeraita */
         }
 
         .content {
-            padding: 4vw; /* Sisämarginaali skaalautuu */
+            padding: 5% 8%;
+        }
+
+        /* Tarinan esittelyosio */
+        .artist-story {
+            background-color: #fdfcf0;
+            padding: 4vw;
+            border: 1px solid #e2d7c5;
+            margin-bottom: 6vw;
+            line-height: 1.8;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+        }
+
+        .artist-story h3 {
+            font-family: 'Lobster', cursive;
+            color: #c0392b;
+            margin-top: 0;
+            font-size: clamp(22px, 4.5vw, 34px);
+            text-align: center;
+        }
+
+        .artist-story p {
+            font-size: clamp(14px, 1.8vw, 18px);
+            margin-bottom: 1.2em;
+            text-align: justify;
         }
 
         h1 {
             font-family: 'Lobster', cursive;
             text-align: center;
-            color: #c0392b;
-            /* Fontin koko skaalautuu näytön leveyden mukaan (5% näytöstä) */
-            font-size: clamp(24px, 5vw, 48px); 
-            margin-bottom: 4vw;
+            color: #2c3e50;
+            font-size: clamp(32px, 8vw, 64px);
+            margin-bottom: 5vw;
         }
 
-        /* Taulukkomainen rakenne ilman reunoja */
+        /* Teosten asettelu (näkymätön taulukko) */
         .art-row {
             display: flex;
             align-items: center;
-            margin-bottom: 5vw;
-            gap: 3vw;
+            margin-bottom: 7vw;
+            gap: 6%;
         }
 
         .art-image {
-            /* Kuva vie aina 35% säiliön leveydestä ja pysyy neliönä */
-            flex: 0 0 35%;
-            aspect-ratio: 1 / 1; 
+            flex: 0 0 40%;
+            aspect-ratio: 1 / 1;
             object-fit: cover;
             border: 1vw solid #fff;
-            box-shadow: 0.5vw 0.5vw 1.5vw rgba(0,0,0,0.2);
+            box-shadow: 0.5vw 0.5vw 2vw rgba(0,0,0,0.15);
+            background-color: #f0f0f0;
         }
 
         .art-text {
@@ -71,42 +94,73 @@
         .art-text h2 {
             font-family: 'Playfair Display', serif;
             margin-top: 0;
-            font-size: clamp(16px, 2.5vw, 28px);
-            border-bottom: 0.2vw dashed #bdc3c7;
-            padding-bottom: 1vw;
+            font-size: clamp(18px, 3.5vw, 28px);
+            border-bottom: 2px solid #5d8aa8;
+            padding-bottom: 0.5vw;
+            color: #2c3e50;
         }
 
         .art-text p {
             line-height: 1.6;
-            font-size: clamp(12px, 1.5vw, 18px); /* Teksti pienenee suhteessa ruutuun */
+            font-size: clamp(13px, 1.7vw, 17px);
+            margin-top: 1.5vw;
+        }
+
+        /* Mobiilioptimointi: kuvat ja tekstit allekkain */
+        @media (max-width: 650px) {
+            .art-row {
+                flex-direction: column;
+                text-align: center;
+            }
+            .art-image {
+                width: 85%;
+                margin-bottom: 5vw;
+            }
+            .art-text h2 {
+                border-bottom: none;
+                text-decoration: underline 2px solid #5d8aa8;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="main-container">
-        <img src="kolme_nude_piisapa_lenskari.jpg" alt="Pääteos" class="hero-image">
+        <img src="kolme_nude_piisapa_lenskari.jpg" alt="Pop Art de Mako" class="hero-image">
 
         <div class="content">
-            <h1>Modernia Väriä & Muotoa</h1>
+            <h1>Pop Art de Mako</h1>
+
+            <div class="artist-story">
+                <h3>Kuitit uutena kankaana</h3>
+                <p>
+                    Kierrätän arkisia kuitteja teosteni pohjana. Etsin sosiaalisesta mediasta kuittien teksteihin ja grafiikkaan sopivia ihmisiä ja aiheita – usein inspiraationa ovat mikkeliläiset ihmiset ja heidän jakamansa materiaalit, toisinaan taas maailman tapahtumat. 
+                </p>
+                <p>
+                    Prosessi alkaa mielenkiintoisten kuittien valinnalla ja taittelulla neliöiksi. Nämä taitokset sekä kuittien pystysuuntainen teksti ja grafiikka ovat osa teosten kiehtovuutta; ne tuovat monenlaista informaatiota ja "maustetta" jokaisen teoksen taustalle.
+                </p>
+                <p>
+                    Pienelle kuitille taiteilen aiheen kaikilla käsiini saamilla kynillä. Valmis piirros skannataan huippulaadulla, jotta lopullinen tulostus on mahdollisimman tarkka ja vaikuttava, päätyen usein suureksi printiksi pinkopohjalle. Olen luonut kuitteihin jo satakunta muotokuvaa, joista kymmenet ovat löytäneet paikkansa yksityisissä kodeissa.
+                </p>
+            </div>
 
             <div class="art-row">
-                <img src="https://via.placeholder.com/300" alt="Teos 1" class="art-image">
+                <img src="huvipuisto" alt="Huvipuisto" class="art-image">
                 <div class="art-text">
-                    <h2>Abstrakti Unelma</h2>
-                    <p>Tämä teos edustaa aikakauden dynaamista otetta, jossa värit kohtaavat vapaan muodon.</p>
+                    <h2>Linnanmäen Syke</h2>
+                    <p>Dynaaminen tulkinta, jossa kuitin alkuperäinen grafiikka luo pohjan vauhdikkaalle liikkeelle ja värien leikille.</p>
                 </div>
             </div>
 
             <div class="art-row">
-                <img src="https://via.placeholder.com/300" alt="Teos 2" class="art-image">
+                <img src="kolme_nude_piisapa_lenskari.jpg" alt="Kolme Piispaa" class="art-image">
                 <div class="art-text">
-                    <h2>Urbaani Syke</h2>
-                    <p>Katunäkymä, joka on suodatettu pop-taiteen esi-isien linssin läpi.</p>
+                    <h2>Kolme Piispaa</h2>
+                    <p>Hahmotutkielma, joka yhdistää klassisen symboliikan ja nykyajan sosiaalisen median havainnot kuitin pienelle pinnalle.</p>
                 </div>
             </div>
 
-        </div>
+            </div>
     </div>
 
 </body>
