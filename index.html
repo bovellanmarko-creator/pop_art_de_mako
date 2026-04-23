@@ -6,7 +6,7 @@
     <title>Pop Art de Mako - Taskusta Taiteeksi</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Special+Elite&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Perusasetukset ja keskitys */
+        /* Perusasetukset ja 2/3 keskitys */
         body {
             margin: 0;
             padding: 0;
@@ -18,7 +18,6 @@
             align-items: center;
         }
 
-        /* Säiliö vie 2/3 (66.6%) leveydestä ja on keskellä */
         .main-container {
             width: 66.6vw; 
             min-width: 320px;
@@ -80,7 +79,7 @@
         }
 
         .art-item {
-            flex: 0 0 47%; /* Noin puolet leveydestä */
+            flex: 0 0 47%;
         }
 
         .art-image {
@@ -105,7 +104,7 @@
             font-size: clamp(13px, 1.4vw, 17px);
         }
 
-        /* Mobiilioptimointi */
+        /* Responsiivisuus kapeille näytöille */
         @media (max-width: 1024px) {
             .main-container { width: 85vw; }
         }
@@ -134,16 +133,16 @@
             <div class="artist-story">
                 <h3>Arkisia kuitteja ja suuria visioita</h3>
                 <p>
-                    Työskentelen usein kirjaston rauhassa ja kierrätän taskuihini kertyneitä kuitteja teosteni pohjana. Taittelemalla kuitin neliöksi luon raamit, joiden sisään aikamme piirturit – kuitin tekstit, viivakoodit ja grafiikka – asettuvat osaksi taideteosta.
+                    Työskentelen usein kirjaston rauhassa ja kierrätän taskuihini kertyneitä kuitteja teosteni pohjana. Taittelemalla kuitin neliöksi luon raamit, joiden sisään aikamme piirturit – kuitin tekstit ja grafiikka – asettuvat osaksi taideteosta.
                 </p>
                 <p>
-                    Etsin sosiaalisesta mediasta kuittien henkeen sopivia hahmoja ja aiheita. Pienelle kuitille syntyy piirros kaikilla käsiini osuvilla kynillä. Valmis teos skannataan ja skaalataan suureksi, jolloin arkisesta paperinpalasta kasvaa vaikuttava kokonaisuus.
+                    Pienelle kuitille syntyy piirros kaikilla käsiini osuvilla kynillä. Valmis teos skannataan ja skaalataan suureksi kirjaston laitteilla, jolloin arkisesta paperinpalasta kasvaa vaikuttava, kookas kokonaisuus.
                 </p>
             </div>
 
             <div class="art-row">
                 <div class="art-item">
-                    <img src="malli.jpg" alt="Malli-teos" class="art-image">
+                    <img src="malli.jpg" alt="Näkymättömät kuitit -teos" class="art-image">
                 </div>
                 <div class="art-item art-text">
                     <h2>Näkymättömät kuitit</h2>
@@ -163,11 +162,11 @@
 
             <div class="art-row">
                 <div class="art-item">
-                    <img src="zoom.jpg" alt="Skaalattu teos" class="art-image">
+                    <img src="zoom_malli.jpg" alt="Skaalattu asettelu: malli.jpg kehyksissä ja telineellä" class="art-image">
                 </div>
                 <div class="art-item art-text">
-                    <h2>Zoomattu todellisuus</h2>
-                    <p>Pieni muuttuu suureksi. Kirjaston laitteilla skaalattu teos tuo esiin kynän jäljen ja kuitin tekstuurin yksityiskohdat, jotka muuten jäisivät huomaamatta.</p>
+                    <h2>Skaalattu todellisuus</h2>
+                    <p>Pieni muuttuu suureksi. Tässä asettelussa näkyy, kuinka sama `malli.jpg` -piirros asettuu sekä kämmenen kokoiselle telineelle että suureksi, kootuksi teokseksi kehyksiin. Se havainnollistaa skaalauksen voiman.</p>
                 </div>
             </div>
 
