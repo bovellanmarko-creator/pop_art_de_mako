@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pop Art de Mako - Taidetta Kuiteille</title>
+    <title>Pop Art de Mako - Taskusta Taiteeksi</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Special+Elite&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Perusasetukset */
         body {
             margin: 0;
             padding: 0;
@@ -17,7 +18,7 @@
             align-items: center;
         }
 
-        /* Sivuston leveys on aina 2/3 (n. 66%) näytöstä */
+        /* Säiliö vie 2/3 (66%) leveydestä ja on keskellä */
         .main-container {
             width: 66.6vw; 
             min-width: 320px;
@@ -26,25 +27,26 @@
             min-height: 100vh;
         }
 
-        /* Pääkuva heti yläreunasta */
+        /* Pääkuva ylhäällä */
         .hero-image {
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 0.5vw solid #c0392b;
+            border-bottom: 0.6vw solid #c0392b;
         }
 
         .content {
             padding: 5% 8%;
         }
 
-        /* Esittelyteksti (Artist Story) */
+        /* Tarina-osio */
         .artist-story {
             background-color: #fdfcf0;
             padding: 3vw;
             border: 1px solid #e2d7c5;
             margin-bottom: 6vw;
             line-height: 1.8;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.02);
         }
 
         .artist-story h3 {
@@ -56,8 +58,8 @@
         }
 
         .artist-story p {
-            font-size: clamp(14px, 1.2vw, 17px);
-            margin-bottom: 1em;
+            font-size: clamp(14px, 1.25vw, 18px);
+            margin-bottom: 1.2em;
             text-align: justify;
         }
 
@@ -65,48 +67,46 @@
             font-family: 'Lobster', cursive;
             text-align: center;
             color: #2c3e50;
-            font-size: clamp(28px, 6vw, 55px);
+            font-size: clamp(30px, 6vw, 60px);
             margin-bottom: 4vw;
+            letter-spacing: 1px;
         }
 
-        /* Teosrivit: Kuva 50% ja Teksti 50% */
+        /* Teosrivit 50/50 jaolla */
         .art-row {
             display: flex;
             align-items: center;
             margin-bottom: 8vw;
-            gap: 5%;
+            gap: 6%;
         }
 
-        .art-image-container {
-            flex: 0 0 47.5%;
+        .art-item {
+            flex: 0 0 47%; /* Puolet leveydestä */
         }
 
         .art-image {
             width: 100%;
             aspect-ratio: 1 / 1;
             object-fit: cover;
-            border: 0.5vw solid #fff;
+            border: 0.6vw solid #fff;
             box-shadow: 0.5vw 0.5vw 1.5vw rgba(0,0,0,0.1);
-        }
-
-        .art-text {
-            flex: 0 0 47.5%;
         }
 
         .art-text h2 {
             font-family: 'Playfair Display', serif;
             margin-top: 0;
-            font-size: clamp(18px, 2.5vw, 26px);
+            font-size: clamp(18px, 2.8vw, 28px);
             border-bottom: 2px solid #5d8aa8;
             padding-bottom: 0.5vw;
+            color: #2c3e50;
         }
 
         .art-text p {
             line-height: 1.6;
-            font-size: clamp(12px, 1.3vw, 16px);
+            font-size: clamp(13px, 1.4vw, 17px);
         }
 
-        /* Responsiivisuus kapeille näytöille */
+        /* Responsiivisuus puhelimille */
         @media (max-width: 1024px) {
             .main-container { width: 85vw; }
         }
@@ -117,13 +117,9 @@
                 flex-direction: column;
                 text-align: center;
             }
-            .art-image-container, .art-text {
-                flex: 0 0 100%;
+            .art-item {
                 width: 100%;
-            }
-            .art-image {
-                width: 90%;
-                margin-bottom: 4vw;
+                margin-bottom: 5vw;
             }
         }
     </style>
@@ -137,45 +133,42 @@
             <h1>Pop Art de Mako</h1>
 
             <div class="artist-story">
-                <h3>Kuitit uutena kankaana</h3>
+                <h3>Arkisia kuitteja ja suuria visioita</h3>
                 <p>
-                    Työskentelen usein kirjaston ilmaisissa tiloissa hyödyntäen arkisia kuitteja teosteni pohjana. Kierrätän kuitin taittelemalla siitä neliön, jolloin taitokset, kuitin tekstit ja grafiikka – aikamme piirturit – tulevat osaksi prosessia.
+                    Työskentelen usein kirjaston rauhassa ja kierrätän taskuihini kertyneitä arkisia kuitteja teosteni pohjana. Taittelemalla kuitin neliöksi luon raamit, joiden sisään aikamme piirturit – kuitin tekstit, viivakoodit ja grafiikka – asettuvat osaksi taideteosta.
                 </p>
                 <p>
-                    Pienelle kuitille taiteilen aiheen kaikilla käsiini saamilla kynillä. Valmiin piirroksen skannaus ja tulostus tapahtuvat kirjaston laitteilla. Tulostan teoksen usein neljässä osassa, jotka kasaan kehyksiin suureksi yhtenäiseksi kokonaisuudeksi happovapaalle paperille.
-                </p>
-                <p>
-                    Alkuperäinen pieni piirros saattaa haalistua ajan saatossa, mutta suureksi zoomattu tuloste mahdollistaa teoksen ja sen yksityiskohtien tutkimisen ikuisesti. Näin arkisesta kuitista kasvaa kestävä ja kookas taideteos.
+                    Etsin sosiaalisesta mediasta kuittien henkeen sopivia hahmoja ja aiheita, usein mikkeliläisiä ihmisiä ja heidän tarinoitaan. Pienelle kuitille syntyy piirros kaikilla käsiini osuvilla kynillä. Valmis teos skannataan kirjastossa ja tulostetaan neljässä osassa, jotka kasaan suureksi, yhtenäiseksi teokseksi. Alkuperäinen piirros saattaa haalistua, mutta suureksi zoomattu vedos säilyttää hetken ikuisesti.
                 </p>
             </div>
 
             <div class="art-row">
-                <div class="art-image-container">
-                    <img src="zoom.jpg" alt="Zoomattu teos" class="art-image">
+                <div class="art-item">
+                    <img src="kadella.jpg" alt="Kuitit taskussa" class="art-image">
                 </div>
-                <div class="art-text">
+                <div class="art-item art-text">
+                    <h2>Taskusta poimittu inspiraatio</h2>
+                    <p>Jokainen löydetty kuitti on mahdollisuus. Tässä näkyy prosessin alku: arkinen paperinpala, joka odottaa muuntumistaan osaksi suurempaa tarinaa.</p>
+                </div>
+            </div>
+
+            <div class="art-row">
+                <div class="art-item">
+                    <img src="zoom.jpg" alt="Skaalattu teos" class="art-image">
+                </div>
+                <div class="art-item art-text">
                     <h2>Zoomattu todellisuus</h2>
-                    <p>Tässä teoksessa näkyy, kuinka pieni kuittipiirros kasvaa suureksi kokonaisuudeksi. Kirjaston laitteilla toteutettu skaalaus tuo esiin kynän jäljen ja kuitin tekstuurin aivan uudessa valossa.</p>
+                    <p>Pieni muuttuu suureksi. Kirjaston laitteilla skaalattu teos tuo esiin kuitin ja kynän jäljen yksityiskohdat, jotka muuten jäisivät huomaamatta.</p>
                 </div>
             </div>
 
             <div class="art-row">
-                <div class="art-image-container">
-                    <img src="huvipuisto" alt="Huvipuisto" class="art-image">
+                <div class="art-item">
+                    <img src="huvipuisto" alt="Huvipuisto-teos" class="art-image">
                 </div>
-                <div class="art-text">
+                <div class="art-item art-text">
                     <h2>Linnanmäen Syke</h2>
-                    <p>Dynaaminen tulkinta kuitin tekstuurilla. Taitokset ja kuitin omat merkinnät rytmittävät huvipuiston vauhtia.</p>
-                </div>
-            </div>
-
-            <div class="art-row">
-                <div class="art-image-container">
-                    <img src="kolme_nude_piisapa_lenskari.jpg" alt="Kolme Piispaa" class="art-image">
-                </div>
-                <div class="art-text">
-                    <h2>Kolme Piispaa</h2>
-                    <p>Sosiaalisen median havainnot ja perinteinen symboliikka kohtaavat kirjaston tiloissa syntyneessä teoksessa.</p>
+                    <p>Värikäs ja dynaaminen tulkinta, jossa kuitin taitokset ja tekstit rytmittävät liikettä ja tunnelmaa.</p>
                 </div>
             </div>
 
