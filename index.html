@@ -6,7 +6,6 @@
     <title>Pop Art de Mako - Taidetta Kuiteille</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Special+Elite&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Perusasetukset ja tausta */
         body {
             margin: 0;
             padding: 0;
@@ -15,19 +14,19 @@
             color: #333;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Keskittää kaiken */
+            align-items: center;
         }
 
-        /* Pääsäiliö, joka on 2/3 (66%) näytön leveydestä */
+        /* Sivuston leveys on aina 2/3 (n. 66%) näytöstä */
         .main-container {
-            width: 66vw; 
-            min-width: 320px; /* Varmistaa toimivuuden kapeilla näytöillä */
+            width: 66.6vw; 
+            min-width: 320px;
             background-color: #ffffff;
             box-shadow: 0 0 5vw rgba(0,0,0,0.05);
             min-height: 100vh;
         }
 
-        /* Pääkuva heti yläreunasta, täyttää 2/3 leveyden */
+        /* Pääkuva heti yläreunasta */
         .hero-image {
             width: 100%;
             height: auto;
@@ -39,7 +38,7 @@
             padding: 5% 8%;
         }
 
-        /* Esittelyteksti */
+        /* Esittelyteksti (Artist Story) */
         .artist-story {
             background-color: #fdfcf0;
             padding: 3vw;
@@ -75,11 +74,11 @@
             display: flex;
             align-items: center;
             margin-bottom: 8vw;
-            gap: 5%; /* Pieni rako kuvan ja tekstin välissä */
+            gap: 5%;
         }
 
         .art-image-container {
-            flex: 0 0 47.5%; /* Lähes puolet (miinus gap) */
+            flex: 0 0 47.5%;
         }
 
         .art-image {
@@ -91,7 +90,7 @@
         }
 
         .art-text {
-            flex: 0 0 47.5%; /* Toinen puoli */
+            flex: 0 0 47.5%;
         }
 
         .art-text h2 {
@@ -107,14 +106,13 @@
             font-size: clamp(12px, 1.3vw, 16px);
         }
 
-        /* Responsiivisuus: puhelimella laajenee 2/3 -> lähes täyteen leveyteen */
-        @media (max-width: 900px) {
-            .main-container {
-                width: 90vw;
-            }
+        /* Responsiivisuus kapeille näytöille */
+        @media (max-width: 1024px) {
+            .main-container { width: 85vw; }
         }
 
         @media (max-width: 650px) {
+            .main-container { width: 95vw; }
             .art-row {
                 flex-direction: column;
                 text-align: center;
@@ -124,7 +122,7 @@
                 width: 100%;
             }
             .art-image {
-                width: 80%;
+                width: 90%;
                 margin-bottom: 4vw;
             }
         }
@@ -141,11 +139,24 @@
             <div class="artist-story">
                 <h3>Kuitit uutena kankaana</h3>
                 <p>
-                    Kierrätän arkisia kuitteja teosteni pohjana. Etsin sosiaalisesta mediasta kuittien teksteihin ja grafiikkaan sopivia ihmisiä ja aiheita – usein inspiraationa ovat mikkeliläiset ihmiset ja heidän jakamansa materiaalit, toisinaan taas maailman tapahtumat. 
+                    Työskentelen usein kirjaston ilmaisissa tiloissa hyödyntäen arkisia kuitteja teosteni pohjana. Kierrätän kuitin taittelemalla siitä neliön, jolloin taitokset, kuitin tekstit ja grafiikka – aikamme piirturit – tulevat osaksi prosessia.
                 </p>
                 <p>
-                    Pienelle kuitille taiteilen aiheen kaikilla käsiini saamilla kynillä. Valmis piirros skannataan huippulaadulla, jotta lopullinen tulostus on mahdollisimman tarkka ja vaikuttava. Taitokset sekä kuittien pystysuuntainen teksti ovat osa teosten kiehtovuutta ja tuovat monenlaista informaatiota teoksen mausteeksi.
+                    Pienelle kuitille taiteilen aiheen kaikilla käsiini saamilla kynillä. Valmiin piirroksen skannaus ja tulostus tapahtuvat kirjaston laitteilla. Tulostan teoksen usein neljässä osassa, jotka kasaan kehyksiin suureksi yhtenäiseksi kokonaisuudeksi happovapaalle paperille.
                 </p>
+                <p>
+                    Alkuperäinen pieni piirros saattaa haalistua ajan saatossa, mutta suureksi zoomattu tuloste mahdollistaa teoksen ja sen yksityiskohtien tutkimisen ikuisesti. Näin arkisesta kuitista kasvaa kestävä ja kookas taideteos.
+                </p>
+            </div>
+
+            <div class="art-row">
+                <div class="art-image-container">
+                    <img src="zoom.jpg" alt="Zoomattu teos" class="art-image">
+                </div>
+                <div class="art-text">
+                    <h2>Zoomattu todellisuus</h2>
+                    <p>Tässä teoksessa näkyy, kuinka pieni kuittipiirros kasvaa suureksi kokonaisuudeksi. Kirjaston laitteilla toteutettu skaalaus tuo esiin kynän jäljen ja kuitin tekstuurin aivan uudessa valossa.</p>
+                </div>
             </div>
 
             <div class="art-row">
@@ -154,7 +165,7 @@
                 </div>
                 <div class="art-text">
                     <h2>Linnanmäen Syke</h2>
-                    <p>Dynaaminen tulkinta, jossa kuitin alkuperäinen grafiikka luo pohjan vauhdikkaalle liikkeelle ja värien leikille.</p>
+                    <p>Dynaaminen tulkinta kuitin tekstuurilla. Taitokset ja kuitin omat merkinnät rytmittävät huvipuiston vauhtia.</p>
                 </div>
             </div>
 
@@ -164,7 +175,7 @@
                 </div>
                 <div class="art-text">
                     <h2>Kolme Piispaa</h2>
-                    <p>Hahmotutkielma, joka yhdistää klassisen symboliikan ja nykyajan sosiaalisen median havainnot kuitin pienelle pinnalle.</p>
+                    <p>Sosiaalisen median havainnot ja perinteinen symboliikka kohtaavat kirjaston tiloissa syntyneessä teoksessa.</p>
                 </div>
             </div>
 
